@@ -1,36 +1,34 @@
-# Genterr Examples
+# Genterr-Examples
 
-Welcome to the Genterr Examples repository!
+This repository contains example agents, tests, and documentation for Genterr.
 
-This repository contains a collection of example projects demonstrating how to use the Genterr SDK in various scenarios. These examples are designed to help you get started quickly and inspire you with different use cases.
+## Installation
 
-## Examples
+Ensure you have Python 3.8 or higher installed.
 
-### Simple Agent
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Genterr/Genterr-Examples.git
+    cd Genterr-Examples
+    ```
 
-This is a basic example of creating a Genterr agent that performs a simple task.
+2. Install the dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-\```python
-from genterr_sdk import SimpleAgent
-import asyncio
+3. Install the `genterr-sdk` package from your local path:
+    ```bash
+    pip install C:/Users/User/genterr-sdk
+    ```
 
-async def main():
-    agent = SimpleAgent(
-        name="simple_agent",
-        description="A simple Genterr agent"
-    )
-    result = await agent.process_task({"message": "Hello, Genterr!"})
-    print(result)
-
-if __name__ == "__main__":
-    asyncio.run(main())
-\```
+## Example Agents
 
 ### Customer Support Agent
 
-An example of an agent that handles customer support inquiries.
+This agent provides support for customer inquiries.
 
-\```python
+```python name=agents/customer_support_agent.py
 from genterr_sdk import SimpleAgent
 import asyncio
 
@@ -40,28 +38,8 @@ async def main():
         description="A customer support Genterr agent"
     )
     result = await agent.process_task({"message": "How can I help you today?"})
-    print(result)
+    return result
 
 if __name__ == "__main__":
-    asyncio.run(main())
-\```
-
-### Advanced Agent
-
-An example of an advanced agent with additional features.
-
-\```python
-from genterr_sdk import AdvancedAgent
-import asyncio
-
-async def main():
-    agent = AdvancedAgent(
-        name="advanced_agent",
-        description="An advanced Genterr agent with additional features"
-    )
-    result = await agent.process_task({"message": "What advanced features do you offer?"})
+    result = asyncio.run(main())
     print(result)
-
-if __name__ == "__main__":
-    asyncio.run(main())
-\```
