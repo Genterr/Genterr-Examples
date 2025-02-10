@@ -7,7 +7,8 @@ async def main():
         description="An advanced Genterr agent with additional features"
     )
     result = await agent.process_task({"message": "What advanced features do you offer?"})
-    print(result)
+    return result  # Rückgabe des Ergebnisses
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    result = asyncio.run(main())
+    print(result)

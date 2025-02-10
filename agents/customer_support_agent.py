@@ -7,7 +7,8 @@ async def main():
         description="A customer support Genterr agent"
     )
     result = await agent.process_task({"message": "How can I help you today?"})
-    print(result)
+    return result  # Rückgabe des Ergebnisses
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    result = asyncio.run(main())
+    print(result)
