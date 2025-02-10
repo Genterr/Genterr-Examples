@@ -17,9 +17,9 @@ Ensure you have Python 3.8 or higher installed.
     pip install -r requirements.txt
     ```
 
-3. Install the `genterr-sdk` package from your local path:
+3. Install the `genterr-sdk`:
     ```bash
-    pip install C:/Users/User/genterr-sdk
+    pip install https://github.com/Genterr/genterr-sdk
     ```
 
 ## Example Agents
